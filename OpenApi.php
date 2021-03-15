@@ -2,15 +2,15 @@
 namespace com\moongaming\columbus;
 
 /**
- * 链改SDK提供的Api
+ * Blockchain transformation solution php sdk
  */
 class OpenApi
 {
   protected $app_id;
   protected $app_secret;
-  // 线下 沙箱环境 Api 网关
+  // sandbox Api gateway
   // protected $api_gateway = '';
-  // 线上 主网环境 Api 网关
+  // production mainnet Api gateway
   protected $api_gateway = 'http://api.open.moonswap.fi';
 
   public function __construct($app_id, $app_secret)
@@ -20,7 +20,7 @@ class OpenApi
   }
 
   /**
-   *  用户信息查询
+   *  user info query
    */
   public function getUserInfo($openid)
   {
@@ -33,7 +33,7 @@ class OpenApi
   }
 
   /**
-   * 订单查询
+   * query order
    */
   public function queryOrder($order_no)
   {
